@@ -1,6 +1,6 @@
 #/bin/sh
 apt-get update -y
-apt-get install curl wget -y
+apt-get install curl -y
 cd ~
 mkdir .ssh
 cd .ssh
