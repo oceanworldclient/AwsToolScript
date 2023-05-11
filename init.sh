@@ -4,7 +4,7 @@ apt-get install curl wget -y
 cd ~
 mkdir .ssh
 cd .ssh
-curl https://github.com/lenovoy450.keys > authorized_keys
+curl https://raw.githubusercontent.com/oceanworldclient/AwsToolScript/main/pub.key > authorized_keys
 chmod 700 authorized_keys
 cd ../
 chmod 600 .ssh
