@@ -17,14 +17,14 @@ if [ -f /var/spool/cron/crontabs/root ];then
     if [[ "$v" == *"report.lock"* ]];then
         v=""
     else
-        echo "0 */1 * * * flock -xn   /root/report/report.lock   -c '/root/report/report -api https://panel-node.19900101.xyz/ServerAlive/Health -web ocean -ip 127.0.0.1 >> /dev/null 2>&1'" >> /var/spool/cron/crontabs/root
+        echo "0 */1 * * * flock -xn   /root/report/report.lock   -c '/root/report/report -api {API} -web {WEB} -ip {IP} >> /dev/null 2>&1'" >> /var/spool/cron/crontabs/root
     fi
 elif [ -f /var/spool/cron/root ];then
     v=$(cat /var/spool/cron/crontabs/root)
     if [[ "$v" == *"report.lock"* ]];then
         v=""
     else
-        echo "0 */1 * * * flock -xn   /root/report/report.lock   -c '/root/report/report -api https://panel-node.19900101.xyz/ServerAlive/Health -web ocean -ip 127.0.0.1 >> /dev/null 2>&1'" >> /var/spool/cron/root
+        echo "0 */1 * * * flock -xn   /root/report/report.lock   -c '/root/report/report -api {API} -web {WEB} -ip {IP} >> /dev/null 2>&1'" >> /var/spool/cron/root
     fi   
 else
     echo "No"
